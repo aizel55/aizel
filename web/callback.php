@@ -73,11 +73,15 @@ if ($total_hit_count === null) {
     "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
     "template" => [
         "type" => "carousel",
-        "actions" => [
-            [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "http://www.yahoo.co.jp/"
+        "columns" => [
+            "title" => "●●レストラン",
+            "text" => "こちらにしますか？",
+            "actions" => [
+                [
+                      "type" => "uri",
+                      "label" => "詳しく見る（ブラウザ起動）",
+                      "uri" => "http://www.yahoo.co.jp/"
+                ]
             ]
         ]
     ]
