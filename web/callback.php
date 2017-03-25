@@ -76,10 +76,9 @@ if ($total_hit_count === null) {
         "text" => "こんにちわ 何かご用ですか？",
         "actions" => [
             [
-              "type" => "message",
+              "type" => "postback",
               "label" => "はい",
-              "data" => "action=rsv&itemid=111",
-              "text" => "はい"
+              "data" => "action=rsv&itemid=111"
             ]
         ]
     ]
