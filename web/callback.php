@@ -79,6 +79,9 @@ if ($total_hit_count === null) {
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
+  $mode = current($work_message);
+
+
   $response_format_text = [
     "type" => "template",
     "altText" => "候補をご案内しています。",
@@ -87,7 +90,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー".count($work_message),
+            "text" => "これかなー".key($work_message),
             "actions" => [
               [
                   "type" => "uri",
