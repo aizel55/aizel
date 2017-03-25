@@ -68,12 +68,24 @@ if ($total_hit_count === null) {
    // $response_format_text .="Powered by ぐるなび";
 }
 
+$work_message =  [
+            "title" => "●●レストラン",
+            "text" => "こちらにしますか？",
+            "actions" => [
+                [
+                    "type" => "uri",
+                    "label" => "詳しく見る（ブラウザ起動）",
+                    "uri" => "http://www.yahoo.co.jp/"
+                ]
+            ]
+  ];
+
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補をご案内しています。",
+    "altText" => "候補をご案内しています。". $work_message->{'title'},
     "template" => [
       "type" => "carousel",
       "columns" => [
