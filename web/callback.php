@@ -76,9 +76,9 @@ if ($total_hit_count === null) {
         "text" => "こんにちわ 何かご用ですか？",
         "actions" => [
             [
-              "type" => "postback",
-              "label" => "はい",
-              "data" => "action=rsv&itemid=111"
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "http://www.yahoo.co.jp/"
             ]
         ]
     ]
