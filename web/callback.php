@@ -72,18 +72,14 @@ if ($total_hit_count === null) {
     "type" => "template",
     "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
     "template" => [
-        "type" => "confirm",
+        "type" => "carousel",
         "text" => "こんにちわ 何かご用ですか？",
         "actions" => [
             [
               "type" => "message",
               "label" => "はい",
+              "data" => "action=rsv&itemid=111",
               "text" => "はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "いいえ"
             ]
         ]
     ]
