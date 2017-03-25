@@ -76,9 +76,9 @@ if ($total_hit_count === null) {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "thumbnailImageUrl" => $image_sample,
       "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね".$image_sample,
+      "text" => "お探しのレストランはこれですね",
       "actions" => [
           [
             "type" => "postback",
