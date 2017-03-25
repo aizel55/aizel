@@ -61,14 +61,56 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
-              $work_message = array(
-                "get_name"=>$restarray->{"name"},
-                "get_url"=>$restarray->{"url"},
-                "get_pr"=>$restArray->{"pr"}->{"pr_short"},
-                "get_time"=>$restArray->{"open_time"}
-              );
+
+              $get_name = $restarray->{"name"};
+              $get_url = $restarray->{"url"};
+              $get_pr = $restArray->{"pr"}->{"pr_short"};
+              $get_time = $restArray->{"open_time"};
 
 //          $work_message = $restArray->{'name'};
+            $response_format_text = [
+              "type" => "template",
+              "altText" => "候補をご案内しています。",
+              "template" => [
+                "type" => "carousel",
+                "columns" => [
+                    [
+                      "title" => $get_name,
+                      "text" => $get_pr,
+                      "actions" => [
+                        [
+                            "type" => "uri",
+                            "label" => "URL",
+                            "uri" => $get_url
+                        ]
+                      ]
+                    ],
+                    [
+                      "title" => "▲▲レストラン",
+                      "text" => "それともこちら？（２つ目）",
+                      "actions" => [
+                        [
+                            "type" => "uri",
+                            "label" => "詳しく見る（ブラウザ起動）",
+                            "uri" => "http://www.yahoo.co.jp/"
+                        ]
+                      ]
+                    ],
+                    [
+                      "title" => "■■レストラン",
+                      "text" => "はたまたこちら？（３つ目）",
+                      "actions" => [
+                        [
+                            "type" => "uri",
+                            "label" => "詳しく見る（ブラウザ起動）",
+                            "uri" => "http://www.yahoo.co.jp/"
+                        ]
+                      ]
+                    ]
+                ]
+              ]
+            ];
+
 
           }
      
@@ -81,48 +123,6 @@ if ($total_hit_count === null) {
 //	"type" => "text",
 //	"text" => $result
 
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "候補をご案内しています。",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "title" => "●●レストラン",
-            "text" => "これかなー?".count($work_message).$work_message[1]->{'get_name'},
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "http://www.yahoo.co.jp/"
-              ]
-            ]
-          ],
-          [
-            "title" => "▲▲レストラン",
-            "text" => "それともこちら？（２つ目）",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "http://www.yahoo.co.jp/"
-              ]
-            ]
-          ],
-          [
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "http://www.yahoo.co.jp/"
-              ]
-            ]
-          ]
-      ]
-    ]
-];
 
 $post_data = [
 	"replyToken" => $replyToken,
