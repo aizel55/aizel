@@ -93,7 +93,7 @@ foreach ($work_message as $value) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー".$store_name,
+            "text" => "これかなー".$store_name[0],
             "actions" => [
               [
                   "type" => "uri",
