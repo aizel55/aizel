@@ -78,7 +78,7 @@ if ($total_hit_count === null) {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://uds.gnst.jp//rest//img//3v7b7fg40000//t_0n5d.png",
+            "thumbnailImageUrl" => "https://uds.gnst.jp/rest/img/3v7b7fg40000/t_0n5d.png",
             "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
