@@ -87,7 +87,7 @@ if ($total_hit_count === null) {
                 "columns" => [
                     [
                       "title" => "▲▲レストラン",
-                      "text" => "それともこちら",
+                      "text" => "それともこちら".$get_name,
                       "actions" => [
                         [
                             "type" => "uri",
