@@ -81,10 +81,6 @@ if ($total_hit_count === null) {
 //	"type" => "text",
 //	"text" => $result
 
-foreach ($work_message as $value) {
-    $store_name = $value;
-}
-
   $response_format_text = [
     "type" => "template",
     "altText" => "候補をご案内しています。",
@@ -93,7 +89,7 @@ foreach ($work_message as $value) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー".$store_name[0],
+            "text" => "これかなー".$work_message['get_name'],
             "actions" => [
               [
                   "type" => "uri",
