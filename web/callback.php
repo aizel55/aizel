@@ -60,7 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
-               $work_message = $restArray->{'name'};
+               $work_message = $restArray->{'image_url'}->{'shop_image1'};
                //$image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
               }
      
