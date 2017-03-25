@@ -70,20 +70,33 @@ if ($total_hit_count === null) {
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
-    "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
+    "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
-        "type" => "carousel",
-        "columns" => [
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
-            "actions" => [
-                [
-                      "type" => "uri",
-                      "label" => "詳しく見る（ブラウザ起動）",
-                      "uri" => "http://www.yahoo.co.jp/"
-                ]
-            ]
-        ]
+      "type" => "buttons",
+      "title" => "○○レストラン",
+      "text" => "お探しのレストランはこれですね",
+      "actions" => [
+          [
+            "type" => "postback",
+            "label" => "予約する",
+            "data" => "action=buy&itemid=123"
+          ],
+          [
+            "type" => "postback",
+            "label" => "電話する",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
+            "type" => "uri",
+            "label" => "詳しく見る",
+            "uri" => "http://www.yahoo.co.jp/"
+          ],
+          [
+            "type" => "message",
+            "label" => "違うやつ",
+            "text" => "違うやつお願い"
+          ]
+      ]
     ]
   ];
 
