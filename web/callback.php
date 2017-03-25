@@ -71,7 +71,7 @@ if ($total_hit_count === null) {
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
-  $work_message .= [
+  $response_format_text = [
     "type" => "template",
     "altText" => "候補をご案内しています。",
     "template" => [
@@ -81,16 +81,6 @@ if ($total_hit_count === null) {
             "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
@@ -103,16 +93,6 @@ if ($total_hit_count === null) {
             "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
-              [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
                   "uri" => "http://www.yahoo.co.jp/"
@@ -123,16 +103,6 @@ if ($total_hit_count === null) {
             "title" => "■■レストラン",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
