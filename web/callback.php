@@ -60,7 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
-               $image_sample = $restArray->{'image_url'}->{'shop_image1'};
+               $image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
               }
      
           }
@@ -77,8 +77,8 @@ if ($total_hit_count === null) {
     "template" => [
       "type" => "buttons",
       "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "○○レストラン".$image_sample,
-      "text" => "お探しのレストランはこれですね",
+      "title" => "○○レストラン",
+      "text" => "お探しのレストランはこれですね".$image_sample,
       "actions" => [
           [
             "type" => "postback",
