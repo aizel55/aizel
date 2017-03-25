@@ -73,7 +73,6 @@ if ($total_hit_count === null) {
     "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
     "template" => [
         "type" => "carousel",
-        "text" => "こんにちわ 何かご用ですか？",
         "actions" => [
             [
                   "type" => "uri",
