@@ -56,7 +56,9 @@ if ($total_hit_count === null) {
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
-               $result .= $restArray->{'url'}."\n\n";
+               $result .= $restArray->{'url'}."\n";
+               $result .= $restArray->{'image_url'}->{'shop_image1'}."\n";
+
               }
      
           }
