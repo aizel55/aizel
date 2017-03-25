@@ -90,7 +90,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー?".$work_message[0]->{'get_name'},
+            "text" => "これかなー?".count($work_message).$work_message[1]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
