@@ -46,7 +46,7 @@ $total_hit_count = $obj->{'total_hit_count'};
 $result = "";
 
 //デバッグ用画像データ
-$image_sample = "";
+$work_message = "";
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -71,14 +71,15 @@ if ($total_hit_count === null) {
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
-  $response_format_text = [
+  $work_message .= [
     "type" => "template",
     "altText" => "候補をご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "title" => "●●レストラン".$total_hit_count,
+            "thumbnailImageUrl" => "https://uds.gnst.jp//rest//img//3v7b7fg40000//t_0n5d.png",
+            "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
               [
