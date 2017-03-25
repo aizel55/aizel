@@ -30,7 +30,7 @@ $format= "json";
 // 業態がラーメン屋さんを意味するぐるなびのコード(大業態マスタ取得APIをコールして調査)
 $category_s = "RSFST08008";
 
-$hit_per_page = "5";
+$hit_per_page = "1";
 
 //緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
 $range = 2;
@@ -69,7 +69,7 @@ if ($total_hit_count === null) {
                   "type" => "carousel",
                   "columns" => [
                     [
-                        "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
+                     //   "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
                         "title" => $restArray->{'name'},
                         "text" => "こちらにしますか？",
                         "actions" => [
