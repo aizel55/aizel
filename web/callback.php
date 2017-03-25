@@ -61,12 +61,13 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
-              $work_message = [
+              $work_message[i] = [
                 "get_name"=>$restarray->{"name"},
                 "get_url"=>$restarray->{"url"},
                 "get_pr"=>$restArray->{"pr"}->{"pr_short"},
                 "get_time"=>$restArray->{"open_time"}
               ];
+              ++$i;
 
 //          $work_message = $restArray->{'name'};
 
@@ -89,7 +90,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー".$result,
+            "text" => "これかなー?".$work_message[0]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
