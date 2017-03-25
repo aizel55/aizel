@@ -73,12 +73,12 @@ if ($total_hit_count === null) {
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補を" . $total_hit_count . "つご案内しています。",
+    "altText" => "候補をご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "title" => "●●レストラン",
+            "title" => "●●レストラン".$total_hit_count,
             "text" => "こちらにしますか？",
             "actions" => [
               [
