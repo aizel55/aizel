@@ -70,7 +70,8 @@ if ($total_hit_count === null) {
               if(empty($get_pr)){
                 $get_pr ="PRテキストはありません。";
               }
-              $get_prtext　= "$get_pr";
+              $get_prtext　= mb_strimwidth("$get_pr", 0, 50, "...");
+
           }
      
           }
