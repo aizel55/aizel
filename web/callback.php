@@ -76,7 +76,7 @@ if ($total_hit_count === null) {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "http://www.itagaki.net/pc/imagefile/memo_0043/photo008.jpg",
+      "thumbnailImageUrl" => "https:\/\/uds.gnst.jp\/rest\/img\/3v7b7fg40000\/t_0n5d.png",
       "title" => "○○レストラン",
       "text" => "お探しのレストランはこれですね",
       "actions" => [
