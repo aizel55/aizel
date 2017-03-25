@@ -64,10 +64,10 @@ if ($total_hit_count === null) {
 
               $get_name = $restArray->{"name"};
               $get_url = $restArray->{"url"};
-              $get_pr = $restArray->{"pr"}->{"pr_long"};
+              $get_pr = $restArray->{"pr"}->{"pr_short"};
               $get_time = $restArray->{"open_time"};
               
-              if(is_null($get_pr)){
+              if(empty($get_pr)){
                 $get_pr ="PRテキストはありません。";
               }
                 
@@ -91,7 +91,7 @@ if ($total_hit_count === null) {
                 "columns" => [
                     [
                       "title" => "test".$get_name,
-                      "text" => "テキストか？？".$get_name,
+                      "text" => "テキストか？？".$get_pr,
                       "actions" => [
                         [
                             "type" => "uri",
