@@ -6,6 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-更新確認
+  アップデート検証
 </body>
 </html>
