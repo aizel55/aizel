@@ -91,7 +91,7 @@ if ($total_hit_count === null) {
                 "columns" => [
                     [
                       "title" => "test".$get_name,
-                      "text" => "テキストか？？".$get_pr,
+                      "text" => "テキストか？？".$get_name,
                       "actions" => [
                         [
                             "type" => "uri",
