@@ -82,7 +82,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これです？",//$work_message[0]->{'get_name'},
+            "text" => $work_message[0]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
