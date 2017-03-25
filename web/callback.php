@@ -92,8 +92,8 @@ if ($total_hit_count === null) {
                 "type" => "carousel",
                 "columns" => [
                     [
-                      "title" => "test".$get_name,
-                      "text" => "テキストか？？".$get_prtext,
+                      "title" => "店名：".$get_name,
+                      "text" => "PR:".$get_prtext,
                       "actions" => [
                         [
                             "type" => "uri",
