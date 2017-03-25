@@ -47,8 +47,6 @@ $result = "";
 
 //店舗情報の格納配列
 $i = 0;
-//$work_message = "";
-//$testarray[] = array('name'=>'test');
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -62,7 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
-               $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
+//              $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
 
 //          $work_message = $restArray->{'name'};
 
@@ -84,7 +82,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => $work_message[0]->{'get_name'},
+            "text" => "これです？",//$work_message[0]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
