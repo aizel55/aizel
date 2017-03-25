@@ -70,7 +70,8 @@ if ($total_hit_count === null) {
               if(empty($get_pr)){
                 $get_pr ="PRテキストはありません。";
               }
-              $get_prtext　= mb_strimwidth("$get_pr", 0, 50, "...");
+              
+              $get_prtext　= mb_strimwidth($get_pr, 0, 50, "...");
 
           }
      
@@ -92,7 +93,7 @@ if ($total_hit_count === null) {
                 "columns" => [
                     [
                       "title" => "test".$get_name,
-                      "text" => "テキストか？？".get_prtext,
+                      "text" => "テキストか？？".$get_prtext,
                       "actions" => [
                         [
                             "type" => "uri",
