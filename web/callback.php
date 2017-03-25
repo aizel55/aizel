@@ -32,8 +32,8 @@ $category_s = "RSFST08008";
 
 $hit_per_page = "5";
 
-//緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=1で300m以内を指定している。
-$range = 1;
+//緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
+$range = 2;
 
 //URL組み立て
 $url  = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", $uri, "?format=", $format, "&keyid=", $acckey, "&latitude=", $latitude,"&longitude=",$longitude,"&category_s=",$category_s,"&range=",$range,"&hit_per_page=",$hit_per_page);
@@ -57,7 +57,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
-               $result .= $restArray->{'image_url'}->{'shop_image1'}."\n";
+               $result .= $restArray->{'image_url'}."\n";
 
               }
      
