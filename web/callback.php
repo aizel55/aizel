@@ -46,10 +46,6 @@ $total_hit_count = $obj->{'total_hit_count'};
 $result = "";
 
 //店舗情報の格納配列
-$work_message[] = array('get_name'=>'store_name',
-                        'get_url'=>'url',
-                        'get_pr'=>'no_data',
-                        'get_time'=>'no_data');
 $i = 0;
 
 //結果をパース
