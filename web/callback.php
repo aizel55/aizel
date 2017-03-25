@@ -92,7 +92,7 @@ if ($total_hit_count === null) {
                         [
                             "type" => "uri",
                             "label" => "URL",
-                            "uri" => "http://www.yahoo.co.jp/"
+                            "uri" => $get_url
                         ]
                       ]
                     ]
