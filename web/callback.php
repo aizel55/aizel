@@ -62,8 +62,8 @@ if ($total_hit_count === null) {
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
 
-              $get_name = $restarray->{"name"};
-              $get_url = $restarray->{"url"};
+              $get_name = $restArray->{"name"};
+              $get_url = $restArray->{"url"};
               $get_pr = $restArray->{"pr"}->{"pr_short"};
               $get_time = $restArray->{"open_time"};
 
