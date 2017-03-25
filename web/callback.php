@@ -86,8 +86,8 @@ if ($total_hit_count === null) {
                 "type" => "carousel",
                 "columns" => [
                     [
-                      "title" => $get_name,
-                      "text" => $get_pr,
+                      "title" => "test".$get_name,
+                      "text" => "テキストか？？",
                       "actions" => [
                         [
                             "type" => "uri",
