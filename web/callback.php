@@ -70,7 +70,7 @@ if ($total_hit_count === null) {
                   "columns" => [
                     [
                      //   "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
-                        "title" => 'a'//$restArray->{'name'},
+                        "title" => 'a',//$restArray->{'name'},
                         "text" => "こちらにしますか？",
                         "actions" => [
                           [
