@@ -57,6 +57,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
+               $result .= $restArray->{'name'}."\n";
 
               }
      
