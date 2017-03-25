@@ -47,7 +47,7 @@ $result = "";
 
 //店舗情報の格納配列
 $i = 0;
-$work_message = "";
+//$work_message = "";
 //$testarray[] = array('name'=>'test');
 
 //結果をパース
@@ -60,11 +60,11 @@ if ($total_hit_count === null) {
     foreach((array)$obj as $key => $val){
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
- //              $result .= $restArray->{'name'}."\n";
-//               $result .= $restArray->{'url'}."\n";
-//               $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
+              $result .= $restArray->{'name'}."\n";
+              $result .= $restArray->{'url'}."\n";
+               $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
 
-          $work_message = $restArray->{'name'};
+//          $work_message = $restArray->{'name'};
 
           }
      
@@ -73,19 +73,18 @@ if ($total_hit_count === null) {
    // $response_format_text .="Powered by ぐるなび";
 }
 
-
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
     "altText" => "候補をご案内しています。",
-    "template" => $work_message,
+    "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "こちらですか",
+            "text" => $work_message[0]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
