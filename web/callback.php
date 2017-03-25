@@ -59,6 +59,7 @@ if ($total_hit_count === null) {
                $result .= $restArray->{'url'}."\n";
                $result .= $restArray->{'shop_image1'}."\n";
 
+
               }
      
           }
