@@ -73,36 +73,76 @@ if ($total_hit_count === null) {
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
-    "altText" => "こちらの〇〇はいかがですか？",
+    "altText" => "候補を３つご案内しています。",
     "template" => [
-      "type" => "buttons",
-      "thumbnailImageUrl" => "https:\/\/uds.gnst.jp\/rest\/img\/3v7b7fg40000\/t_0n5d.png",
-      "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね",
-      "actions" => [
+      "type" => "carousel",
+      "columns" => [
           [
-            "type" => "postback",
-            "label" => "予約する",
-            "data" => "action=buy&itemid=123"
+            "title" => "●●レストラン",
+            "text" => "こちらにしますか？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "http://www.yahoo.co.jp/"
+              ]
+            ]
           ],
           [
-            "type" => "postback",
-            "label" => "電話する",
-            "data" => "action=pcall&itemid=123"
+            "title" => "▲▲レストラン",
+            "text" => "それともこちら？（２つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "http://www.yahoo.co.jp/"
+              ]
+            ]
           ],
           [
-            "type" => "uri",
-            "label" => "詳しく見る",
-            "uri" => "http://www.yahoo.co.jp/"
-          ],
-          [
-            "type" => "message",
-            "label" => "違うやつ",
-            "text" => "違うやつお願い"
+            "title" => "■■レストラン",
+            "text" => "はたまたこちら？（３つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=333"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "http://www.yahoo.co.jp/"
+              ]
+            ]
           ]
       ]
     ]
-  ];
+];
 
 $post_data = [
 	"replyToken" => $replyToken,
