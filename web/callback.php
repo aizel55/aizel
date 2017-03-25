@@ -67,6 +67,17 @@ if ($total_hit_count === null) {
               $get_pr = $restArray->{"pr"}->{"pr_short"};
               $get_time = $restArray->{"open_time"};
 
+
+          }
+     
+          }
+    }
+   // $response_format_text .="Powered by ぐるなび";
+}
+
+//返信データ作成
+//	"type" => "text",
+//	"text" => $result
 //          $work_message = $restArray->{'name'};
             $response_format_text = [
               "type" => "template",
@@ -84,44 +95,10 @@ if ($total_hit_count === null) {
                             "uri" => $get_url
                         ]
                       ]
-                    ],
-                    [
-                      "title" => "▲▲レストラン",
-                      "text" => "それともこちら？（２つ目）",
-                      "actions" => [
-                        [
-                            "type" => "uri",
-                            "label" => "詳しく見る（ブラウザ起動）",
-                            "uri" => "http://www.yahoo.co.jp/"
-                        ]
-                      ]
-                    ],
-                    [
-                      "title" => "■■レストラン",
-                      "text" => "はたまたこちら？（３つ目）",
-                      "actions" => [
-                        [
-                            "type" => "uri",
-                            "label" => "詳しく見る（ブラウザ起動）",
-                            "uri" => "http://www.yahoo.co.jp/"
-                        ]
-                      ]
                     ]
                 ]
               ]
             ];
-
-
-          }
-     
-          }
-    }
-   // $response_format_text .="Powered by ぐるなび";
-}
-
-//返信データ作成
-//	"type" => "text",
-//	"text" => $result
 
 
 $post_data = [
