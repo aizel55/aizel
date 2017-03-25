@@ -60,7 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
-               $image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
+               //$image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
               }
      
           }
@@ -76,7 +76,7 @@ if ($total_hit_count === null) {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => $image_sample,
+      "thumbnailImageUrl" => "http://www.itagaki.net/pc/imagefile/memo_0043/photo008.jpg",
       "title" => "○○レストラン",
       "text" => "お探しのレストランはこれですね",
       "actions" => [
