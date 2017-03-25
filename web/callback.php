@@ -47,6 +47,8 @@ $result = "";
 
 //店舗情報の格納配列
 $i = 0;
+$work_message = "";
+$testarray[] = array('name'=>'test');
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -62,7 +64,9 @@ if ($total_hit_count === null) {
 //               $result .= $restArray->{'url'}."\n";
 //               $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
                //$image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
-          $work_message[] = array('get_name'=> $restArray->{'name'});
+
+          $work_message= $restArray->{'name'};
+
           }
      
           }
@@ -77,12 +81,12 @@ if ($total_hit_count === null) {
   $response_format_text = [
     "type" => "template",
     "altText" => "候補をご案内しています。",
-    "template" => [
+    "template" => $work_message,
       "type" => "carousel",
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => $work_message[0]->{'get_name'},
+            "text" => "こちらですか",
             "actions" => [
               [
                   "type" => "uri",
