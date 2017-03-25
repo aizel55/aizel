@@ -78,20 +78,9 @@ if ($total_hit_count === null) {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://uds.gnst.jp/rest/img/3v7b7fg40000/t_0n5d.png",
             "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
@@ -104,16 +93,6 @@ if ($total_hit_count === null) {
             "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
                   "uri" => "http://www.yahoo.co.jp/"
@@ -124,16 +103,6 @@ if ($total_hit_count === null) {
             "title" => "■■レストラン",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=333"
-              ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
