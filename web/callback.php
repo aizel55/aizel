@@ -64,16 +64,20 @@ if ($total_hit_count === null) {
 
               $get_name = $restArray->{"name"};
               $get_url = $restArray->{"url"};
-              $get_pr = $restArray->{"pr"}->{"pr_short"};
+              $get_pr = $restArray->{"pr"}->{"pr_long"};
               $get_time = $restArray->{"open_time"};
-
-
+              
+              if(is_null($get_pr)){
+                $get_pr ="PRテキストはありません。";
+              }
+                
+              }
           }
      
           }
     }
    // $response_format_text .="Powered by ぐるなび";
-}
+
 
 //返信データ作成
 //	"type" => "text",
