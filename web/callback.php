@@ -60,6 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
+               $work_message = $restArray->{'name'};
                //$image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
               }
      
@@ -68,17 +69,17 @@ if ($total_hit_count === null) {
    // $response_format_text .="Powered by ぐるなび";
 }
 
-$work_message =  [
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
-            "actions" => [
-                [
-                    "type" => "uri",
-                    "label" => "詳しく見る（ブラウザ起動）",
-                    "uri" => "http://www.yahoo.co.jp/"
-                ]
-            ]
-  ];
+//$work_message =  [
+//            "title" => "●●レストラン",
+//            "text" => "こちらにしますか？",
+//            "actions" => [
+//                [
+//                    "type" => "uri",
+//                    "label" => "詳しく見る（ブラウザ起動）",
+//                    "uri" => "http://www.yahoo.co.jp/"
+//                ]
+//            ]
+//  ];
 
 //返信データ作成
 //	"type" => "text",
@@ -91,7 +92,7 @@ $work_message =  [
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => $work_message->{'title'},
+            "text" => $work_message,
             "actions" => [
               [
                   "type" => "uri",
