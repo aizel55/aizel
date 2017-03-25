@@ -67,9 +67,9 @@ if ($total_hit_count === null) {
               $get_pr = $restArray->{"pr"}->{"pr_short"};
               $get_time = $restArray->{"open_time"};
               
-              if(empty($get_pr)){
+//              if(empty($get_pr)){
                 $get_pr ="PRテキストはありません。";
-              }
+//              }
                 
               }
           }
