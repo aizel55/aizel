@@ -47,6 +47,7 @@ $result = "";
 
 //店舗情報の格納配列
 $i = 0;
+$store_name ="";
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -79,8 +80,10 @@ if ($total_hit_count === null) {
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
-  $mode = current($work_message);
 
+foreach ($work_message as $value) {
+    $store_name = $value;
+}
 
   $response_format_text = [
     "type" => "template",
@@ -90,7 +93,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "これかなー".key($work_message),
+            "text" => "これかなー".$store_name,
             "actions" => [
               [
                   "type" => "uri",
