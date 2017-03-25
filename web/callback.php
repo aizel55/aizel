@@ -85,13 +85,13 @@ $work_message =  [
 //	"text" => $result
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補をご案内しています。". $work_message->{'title'},
+    "altText" => "候補をご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
+            "text" => $work_message->{'title'},
             "actions" => [
               [
                   "type" => "uri",
