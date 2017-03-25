@@ -67,15 +67,15 @@ if ($total_hit_count === null) {
               $get_pr = $restArray->{"pr"}->{"pr_short"};
               $get_time = $restArray->{"open_time"};
               
-//              if(empty($get_pr)){
+              if(empty($get_pr)){
                 $get_pr ="PRテキストはありません。";
-//              }
-                
               }
+              $get_prtext　= "$get_pr";
           }
      
           }
     }
+}
    // $response_format_text .="Powered by ぐるなび";
 
 
@@ -91,7 +91,7 @@ if ($total_hit_count === null) {
                 "columns" => [
                     [
                       "title" => "test".$get_name,
-                      "text" => "テキストか？？".$get_pr,
+                      "text" => "テキストか？？".get_prtext,
                       "actions" => [
                         [
                             "type" => "uri",
