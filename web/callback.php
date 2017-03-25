@@ -92,7 +92,7 @@ if ($total_hit_count === null) {
                 "type" => "carousel",
                 "columns" => [
                     [
-                      "title" => $get_name,
+                      "title" => $get_name.count($get_name),
                       "text" => "PR:".$get_prtext,
                       "actions" => [
                         [
