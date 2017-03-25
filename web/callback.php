@@ -45,6 +45,9 @@ $obj  = json_decode($json);
 $total_hit_count = $obj->{'total_hit_count'};
 $result = "";
 
+//デバッグ用画像データ
+$image_sample = "";
+
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
 if ($total_hit_count === null) {
@@ -57,7 +60,7 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
                $result .= $restArray->{'name'}."\n";
                $result .= $restArray->{'url'}."\n";
-               //$result .= $restArray->{'image_url'}->{'shop_image1'}."\n";
+               $image_sample = $restArray->{'image_url'}->{'shop_image1'};
               }
      
           }
@@ -73,7 +76,8 @@ if ($total_hit_count === null) {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "title" => "○○レストラン",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "○○レストラン".$image_sample,
       "text" => "お探しのレストランはこれですね",
       "actions" => [
           [
