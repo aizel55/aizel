@@ -47,7 +47,6 @@ $result = "";
 
 //店舗情報の格納配列
 $i = 0;
-$store_name ="";
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -73,6 +72,22 @@ if ($total_hit_count === null) {
               
               $get_prtext　= mb_strimwidth($get_pr, 0, 50, "...");
 
+//              $work_message .=[
+//                "columns" => [
+//                    [
+//                      "title" => $get_name.count($get_name),
+//                      "text" => "PR:".$get_prtext,
+//                      "actions" => [
+//                        [
+//                            "type" => "uri",
+//                            "label" => "URL",
+//                            "uri" => $get_url
+//                        ]
+//                      ]
+//                    ]
+//                ]
+//              ];
+
           }
      
           }
@@ -92,7 +107,7 @@ if ($total_hit_count === null) {
                 "type" => "carousel",
                 "columns" => [
                     [
-                      "title" => $get_name.count($get_name),
+                      "title" => $get_name,
                       "text" => "PR:".$get_prtext,
                       "actions" => [
                         [
