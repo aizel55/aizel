@@ -30,7 +30,7 @@ $format= "json";
 // 業態がラーメン屋さんを意味するぐるなびのコード(大業態マスタ取得APIをコールして調査)
 $category_s = "RSFST08008";
 
-$hit_per_page = "1";
+$hit_per_page = "5";
 
 //緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
 $range = 2;
@@ -66,18 +66,17 @@ if ($total_hit_count === null) {
 }
 
 //返信データ作成
-$response_format_text .= [
 //	"type" => "text",
 //	"text" => $result
-
+  $response_format_text = [
     "type" => "template",
-    "altText" => "候補を1つご案内しています。",
+    "altText" => "候補を３つご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
-        [
-         //   "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
-            "title" => 'a',//$restArray->{'name'},
+          [
+            //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
               [
@@ -93,13 +92,48 @@ $response_format_text .= [
 //              [
 //                  "type" => "uri",
 //                  "label" => "詳しく見る（ブラウザ起動）",
-//                  "uri" => "117" //$restArray->{'url'}
+//                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
 //              ]
             ]
-        ]
-       ]
+          ],
+          [
+//            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "▲▲レストラン",
+            "text" => "それともこちら？（２つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "■■レストラン",
+            "text" => "はたまたこちら？（３つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=333"
+              ],
+            ]
+          ]
+      ]
     ]
-];
+  ];
+
 
 $post_data = [
 	"replyToken" => $replyToken,
