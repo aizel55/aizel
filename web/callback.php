@@ -64,13 +64,13 @@ if ($total_hit_count === null) {
             //	"text" => $result
             
                 "type" => "template",
-                "altText" => "候補を" . $total_hit_count . "つご案内しています。",
+                "altText" => "候補を1つご案内しています。",
                 "template" => [
                   "type" => "carousel",
                   "columns" => [
                     [
                      //   "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
-                        "title" => $restArray->{'name'},
+                        "title" => 'a'//$restArray->{'name'},
                         "text" => "こちらにしますか？",
                         "actions" => [
                           [
@@ -86,7 +86,7 @@ if ($total_hit_count === null) {
                           [
                               "type" => "uri",
                               "label" => "詳しく見る（ブラウザ起動）",
-                              "uri" => $restArray->{'url'}
+                              "uri" => "a" //$restArray->{'url'}
                           ]
                         ]
                     ]
@@ -99,7 +99,7 @@ if ($total_hit_count === null) {
      
           }
     }
-    $response_format_text .="Powered by ぐるなび";
+   // $response_format_text .="Powered by ぐるなび";
 }
 
 
