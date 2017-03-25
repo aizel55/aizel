@@ -50,36 +50,58 @@ $result = "";
 if ($total_hit_count === null) {
     $result .= "近くにラーメン屋さんはありません。";
 }else{
-    $result .= "近くにあるラーメン屋さんです。\n\n";
+//    $result .= "近くにあるラーメン屋さんです。\n\n";
 
     foreach((array)$obj as $key => $val){
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
-               $result .= $restArray->{'name'}."\n";
-               $result .= $restArray->{'url'}."\n";
-               $result .= $restArray->{'image_url'}->{'shop_image1'}."\n";
+//               $result .= $restArray->{'name'}."\n";
+//               $result .= $restArray->{'url'}."\n";
+//               $result .= $restArray->{'image_url'}->{'shop_image1'}."\n";
+            //返信データ作成
+            $response_format_text .= [
+            //	"type" => "text",
+            //	"text" => $result
+            
+                "type" => "template",
+                "altText" => "候補を" . $total_hit_count . "つご案内しています。",
+                "template" => [
+                  "type" => "carousel",
+                  "columns" => [
+                    [
+                        "thumbnailImageUrl" => $restArray->{'image_url'}->{'shop_image1'},
+                        "title" => $restArray->{'name'},
+                        "text" => "こちらにしますか？",
+                        "actions" => [
+                          [
+                              "type" => "postback",
+                              "label" => "予約する",
+                              "data" => "action=rsv&itemid=111"
+                          ],
+                          [
+                              "type" => "postback",
+                              "label" => "電話する",
+                              "data" => "action=pcall&itemid=111"
+                          ],
+                          [
+                              "type" => "uri",
+                              "label" => "詳しく見る（ブラウザ起動）",
+                              "uri" => $restArray->{'url'}
+                          ]
+                        ]
+                    ]
+                   ]
+                ]
+            ];
+
 
               }
      
           }
     }
-    $result.="Powered by ぐるなび";
+    $response_format_text .="Powered by ぐるなび";
 }
-// //文字列であるかをチェック
-// function checkString($input)
-// {
- 
-//     if(isset($input) && is_string($input)) {
-//         return true;
-//     }else{
-//         return false;
-//     }
-// }
-//返信データ作成
-$response_format_text = [
-	"type" => "text",
-	"text" => $result
-	];
+
 
 $post_data = [
 	"replyToken" => $replyToken,
