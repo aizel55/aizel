@@ -60,7 +60,12 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
-              $work_message = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time'});
+              $work_message = [
+                "get_name"=>$restarray->{"name"},
+                "get_url"=>$restarray->{"url"},
+                "get_pr"=>$restArray->{"pr"}->{"pr_short"},
+                "get_time"=>$restArray->{"open_time"}
+              ];
 
 //          $work_message = $restArray->{'name'};
 
