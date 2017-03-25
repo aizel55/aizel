@@ -86,13 +86,13 @@ if ($total_hit_count === null) {
                 "type" => "carousel",
                 "columns" => [
                     [
-                      "title" => "▲▲レストラン",
-                      "text" => "それともこちら".$get_name,
+                      "title" => $get_name,
+                      "text" => $get_pr,
                       "actions" => [
                         [
                             "type" => "uri",
                             "label" => "URL",
-                            "uri" => "http://www.yahoo.co.jp/"
+                            "uri" => $get_url
                         ]
                       ]
                     ]
