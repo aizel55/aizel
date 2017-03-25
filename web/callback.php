@@ -45,8 +45,12 @@ $obj  = json_decode($json);
 $total_hit_count = $obj->{'total_hit_count'};
 $result = "";
 
-//デバッグ用画像データ
-$work_message = "";
+//店舗情報の格納配列
+$work_message[] = array('get_name'=>'store_name',
+                        'get_url'=>'url',
+                        'get_pr'=>'no_data',
+                        'get_time'=>'no_data');
+$i = 0;
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -58,9 +62,10 @@ if ($total_hit_count === null) {
     foreach((array)$obj as $key => $val){
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
-               $result .= $restArray->{'name'}."\n";
-               $result .= $restArray->{'url'}."\n";
-               $work_message = $restArray->{'access'}->{'walk'};
+ //              $result .= $restArray->{'name'}."\n";
+//               $result .= $restArray->{'url'}."\n";
+               $work_message[] = array('get_name'=>$restarray->{'name'},'get_url'=>$restarray->{'url'},'get_pr'=>$restArray->{'pr'}->{'pr_short'},'get_time'=>$restArray->{'open_time')
+
                //$image_sample = $restArray->{'url'};//$restArray->{'image_url'}->{'shop_image1'};
               }
      
@@ -69,17 +74,6 @@ if ($total_hit_count === null) {
    // $response_format_text .="Powered by ぐるなび";
 }
 
-//$work_message =  [
-//            "title" => "●●レストラン",
-//            "text" => "こちらにしますか？",
-//            "actions" => [
-//                [
-//                    "type" => "uri",
-//                    "label" => "詳しく見る（ブラウザ起動）",
-//                    "uri" => "http://www.yahoo.co.jp/"
-//                ]
-//            ]
-//  ];
 
 //返信データ作成
 //	"type" => "text",
@@ -92,7 +86,7 @@ if ($total_hit_count === null) {
       "columns" => [
           [
             "title" => "●●レストラン",
-            "text" => $work_message,
+            "text" => $work_message[0]->{'get_name'},
             "actions" => [
               [
                   "type" => "uri",
