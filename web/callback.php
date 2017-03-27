@@ -46,7 +46,35 @@ $total_hit_count = $obj->{'total_hit_count'};
 $result = "";
 
 //店舗情報の格納配列
-$i = 0;
+$i = 1;
+
+//イケてないけど、$response_format_textにループで配列データ格納しようとしても
+//失敗してしまうのでベタうちにする。
+$get_name1 ="";
+$get_url1 ="";
+$get_pr1 ="";
+$get_prtext1 ="";
+
+$get_name2 ="";
+$get_url2 ="";
+$get_pr2 ="";
+$get_prtext2 ="";
+
+$get_name3 ="";
+$get_url3 ="";
+$get_pr3 ="";
+$get_prtext3 ="";
+
+$get_name4 ="";
+$get_url4 ="";
+$get_pr4 ="";
+$get_prtext4 ="";
+
+$get_name5 ="";
+$get_url5 ="";
+$get_pr5 ="";
+$get_prtext5 ="";
+
 
 //結果をパース
 //トータルヒット件数、店舗番号、店舗名、最寄の路線、最寄の駅、最寄駅から店までの時間、店舗の小業態を出力
@@ -61,33 +89,55 @@ if ($total_hit_count === null) {
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
 
-              $get_name = $restArray->{"name"};
-              $get_url = $restArray->{"url"};
-              $get_pr = $restArray->{"pr"}->{"pr_short"};
-              $get_time = $restArray->{"open_time"};
-              
-              if(empty($get_pr)){
-                $get_pr ="PRテキストはありません。";
+              switch ($i){
+                case 1:
+                  $get_name1 =$restArray->{"name"};
+                  $get_url1 =$restArray->{"url"};
+                  $get_pr1 =$restArray->{"pr"}->{"pr_long"};
+                  if(empty($get_pr1)){
+                    $get_pr1 ="PRテキストはありません。";
+                  }
+                  $get_prtext1　= mb_strimwidth($get_pr1, 0, 50, "...");
+                  continue 2;
+                case 2:
+                  $get_name2 =$restArray->{"name"};
+                  $get_url2 =$restArray->{"url"};
+                  $get_pr2 =$restArray->{"pr"}->{"pr_long"};
+                  if(empty($get_pr2)){
+                    $get_pr2 ="PRテキストはありません。";
+                  }
+                  $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
+                  continue 2;
+                case 3:
+                  $get_name3 =$restArray->{"name"};
+                  $get_url3 =$restArray->{"url"};
+                  $get_pr3 =$restArray->{"pr"}->{"pr_long"};
+                  if(empty($get_pr3)){
+                    $get_pr3 ="PRテキストはありません。";
+                  }
+                  $get_prtext3　= mb_strimwidth($get_pr3, 0, 50, "...");
+                  continue 2;
+                case 4:
+                  $get_name4 =$restArray->{"name"};
+                  $get_url4 =$restArray->{"url"};
+                  $get_pr4 =$restArray->{"pr"}->{"pr_long"};
+                  if(empty($get_pr4)){
+                    $get_pr4 ="PRテキストはありません。";
+                  }
+                  $get_prtext4　= mb_strimwidth($get_pr4, 0, 50, "...");
+                  continue 2;
+                case 5:
+                  $get_name5 =$restArray->{"name"};
+                  $get_url5 =$restArray->{"url"};
+                  $get_pr5 =$restArray->{"pr"}->{"pr_long"};
+                  if(empty($get_pr5)){
+                    $get_pr5 ="PRテキストはありません。";
+                  }
+                  $get_prtext5　= mb_strimwidth($get_pr5, 0, 50, "...");
+                  continue 2;
               }
-              
-              $get_prtext　= mb_strimwidth($get_pr, 0, 50, "...");
 
-//              $work_message .=[
-//                "columns" => [
-//                    [
-//                      "title" => $get_name.count($get_name),
-//                      "text" => "PR:".$get_prtext,
-//                      "actions" => [
-//                        [
-//                            "type" => "uri",
-//                            "label" => "URL",
-//                            "uri" => $get_url
-//                        ]
-//                      ]
-//                    ]
-//                ]
-//              ];
-
+              $i++;
           }
      
           }
@@ -100,26 +150,70 @@ if ($total_hit_count === null) {
 //	"type" => "text",
 //	"text" => $result
 //          $work_message = $restArray->{'name'};
-            $response_format_text = [
-              "type" => "template",
-              "altText" => "候補をご案内しています。",
-              "template" => [
-                "type" => "carousel",
-                "columns" => [
-                    [
-                      "title" => $get_name,
-                      "text" => "PR:".$get_prtext,
-                      "actions" => [
-                        [
-                            "type" => "uri",
-                            "label" => "URL",
-                            "uri" => $get_url
-                        ]
-                      ]
-                    ]
-                ]
-              ]
-            ];
+$response_format_text = [
+  "type" => "template",
+  "altText" => "候補をご案内しています。",
+  "template" => [
+    "type" => "carousel",
+    "columns" => [
+        [
+          "title" => $get_name1,
+          "text" => "PR:".$get_prtext1,
+          "actions" => [
+            [
+                "type" => "uri",
+                "label" => "URL",
+                "uri" => $get_url1
+            ]
+          ]
+        ],
+        [
+          "title" => $get_name2,
+          "text" => "PR:".$get_prtext2,
+          "actions" => [
+            [
+                "type" => "uri",
+                "label" => "URL",
+                "uri" => $get_url2
+            ]
+          ]
+        ],
+        [
+          "title" => $get_name3,
+          "text" => "PR:".$get_prtext3,
+          "actions" => [
+            [
+                "type" => "uri",
+                "label" => "URL",
+                "uri" => $get_url3
+            ]
+          ]
+        ],
+        [
+          "title" => $get_name4,
+          "text" => "PR:".$get_prtext4,
+          "actions" => [
+            [
+                "type" => "uri",
+                "label" => "URL",
+                "uri" => $get_url4
+            ]
+          ]
+        ],
+        [
+          "title" => $get_name5,
+          "text" => "PR:".$get_prtext5,
+          "actions" => [
+            [
+                "type" => "uri",
+                "label" => "URL",
+                "uri" => $get_url5
+            ]
+          ]
+        ]
+    ]
+  ]
+];
 
 
 $post_data = [
