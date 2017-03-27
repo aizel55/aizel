@@ -95,8 +95,7 @@ if ($total_hit_count === null) {
               if(empty(trim($get_pr2))){
                 $get_pr2 ="PRテキストはありません。";
               }
-//              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
-              $get_prtext2　= "test";
+              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
 
           }
      
@@ -117,7 +116,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          "title" => $get_name1,
+          "title" => $get_name1.$get_prtext2,
           "text" => "PR:".$get_prtext1,
           "actions" => [
             [
