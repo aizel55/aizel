@@ -93,7 +93,7 @@ if ($total_hit_count === null) {
                 case 1:
                   $get_name1 =$restArray->{"name"};
                   $get_url1 =$restArray->{"url"};
-                  $get_pr1 =$restArray->{"pr"}->{"pr_long"};
+                  $get_pr1 =$restArray->{"pr"}->{"pr_short"};
                   if(empty($get_pr1)){
                     $get_pr1 ="PRテキストはありません。";
                   }
@@ -102,7 +102,7 @@ if ($total_hit_count === null) {
                 case 2:
                   $get_name2 =$restArray->{"name"};
                   $get_url2 =$restArray->{"url"};
-                  $get_pr2 =$restArray->{"pr"}->{"pr_long"};
+                  $get_pr2 =$restArray->{"pr"}->{"pr_short"};
                   if(empty($get_pr2)){
                     $get_pr2 ="PRテキストはありません。";
                   }
@@ -111,7 +111,7 @@ if ($total_hit_count === null) {
                 case 3:
                   $get_name3 =$restArray->{"name"};
                   $get_url3 =$restArray->{"url"};
-                  $get_pr3 =$restArray->{"pr"}->{"pr_long"};
+                  $get_pr3 =$restArray->{"pr"}->{"pr_short"};
                   if(empty($get_pr3)){
                     $get_pr3 ="PRテキストはありません。";
                   }
@@ -120,7 +120,7 @@ if ($total_hit_count === null) {
                 case 4:
                   $get_name4 =$restArray->{"name"};
                   $get_url4 =$restArray->{"url"};
-                  $get_pr4 =$restArray->{"pr"}->{"pr_long"};
+                  $get_pr4 =$restArray->{"pr"}->{"pr_short"};
                   if(empty($get_pr4)){
                     $get_pr4 ="PRテキストはありません。";
                   }
@@ -129,7 +129,7 @@ if ($total_hit_count === null) {
                 case 5:
                   $get_name5 =$restArray->{"name"};
                   $get_url5 =$restArray->{"url"};
-                  $get_pr5 =$restArray->{"pr"}->{"pr_long"};
+                  $get_pr5 =$restArray->{"pr"}->{"pr_short"};
                   if(empty($get_pr5)){
                     $get_pr5 ="PRテキストはありません。";
                   }
