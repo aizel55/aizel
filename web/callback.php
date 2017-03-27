@@ -96,7 +96,7 @@ if ($total_hit_count === null) {
                 $get_pr2 ="PRテキストはありません。";
               }
 //              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
-              $get_prtext2　= $get_pr2;
+              $get_prtext2　= "test";
 
           }
      
