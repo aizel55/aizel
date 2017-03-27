@@ -92,10 +92,17 @@ if ($total_hit_count === null) {
               $get_name2 =$restArray->{"name"};
               $get_url2 =$restArray->{"url"};
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
+
+              switch ($i){
+                case 1:
+                  $get_pr1 = "1を通りました";
+                  continue 2;
+              }
+
               if(empty(trim($get_pr2))){
                 $get_pr2 ="PRテキストはありません。";
               }
-              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
+//              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
 
           }
      
@@ -116,7 +123,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          "title" => $get_name1.$get_prtext2,
+          "title" => $get_name1,
           "text" => "PR:".$get_prtext1,
           "actions" => [
             [
