@@ -93,10 +93,8 @@ if ($total_hit_count === null) {
               $get_url2 =$restArray->{"url"};
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
 
-              switch ($i){
-                case 1:
+              if ($i===1){
                   $get_pr1 = "1を通りました";
-                  continue 2;
               }
 
               if(empty(trim($get_pr2))){
@@ -108,7 +106,7 @@ if ($total_hit_count === null) {
      
           }
     }
-};
+}
    // $response_format_text .="Powered by ぐるなび";
 
 
