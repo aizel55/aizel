@@ -93,6 +93,7 @@ if ($total_hit_count === null) {
               $get_url2 =$restArray->{"url"};
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
 
+              //switch文だとLineにレスが返らないのでif文で対応
               if ($i===1){
                   $get_pr1 = "1を通りました";
               }
@@ -160,7 +161,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name3,
-          "text" => "PR:".$get_prtext3,
+          "text" => "PR:".$get_pr3,
           "actions" => [
             [
                 "type" => "uri",
@@ -171,7 +172,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name4,
-          "text" => "PR:".$get_prtext4,
+          "text" => "PR:".$get_pr4,
           "actions" => [
             [
                 "type" => "uri",
@@ -182,7 +183,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name5,
-          "text" => "PR:".$get_prtext5,
+          "text" => "PR:".$get_pr5,
           "actions" => [
             [
                 "type" => "uri",
