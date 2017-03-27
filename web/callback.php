@@ -91,7 +91,7 @@ if ($total_hit_count === null) {
 
               $get_name2 =$restArray->{"name"};
               $get_url2 =$restArray->{"url"};
-              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
+              $get_pr2 =$restArray->{"pr"}->{"pr_long"};
               if(empty($get_pr2)){
                 $get_pr2 ="PRテキストはありません。";
               }
