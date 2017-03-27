@@ -50,28 +50,28 @@ $i = 1;
 
 //イケてないけど、$response_format_textにループで配列データ格納しようとしても
 //失敗してしまうのでベタうちにする。
-$get_name1 ="";
-$get_url1 ="";
+$get_name1 ="a";
+$get_url1 ="http://www.yahoo.co.jp/";
 $get_pr1 ="";
 $get_prtext1 ="";
 
-$get_name2 ="";
-$get_url2 ="";
+$get_name2 ="b";
+$get_url2 ="http://www.yahoo.co.jp/";
 $get_pr2 ="";
 $get_prtext2 ="";
 
-$get_name3 ="";
-$get_url3 ="";
+$get_name3 ="c";
+$get_url3 ="http://www.yahoo.co.jp/";
 $get_pr3 ="";
 $get_prtext3 ="";
 
-$get_name4 ="";
-$get_url4 ="";
+$get_name4 ="d";
+$get_url4 ="http://www.yahoo.co.jp/";
 $get_pr4 ="";
 $get_prtext4 ="";
 
-$get_name5 ="";
-$get_url5 ="";
+$get_name5 ="e";
+$get_url5 ="http://www.yahoo.co.jp/";
 $get_pr5 ="";
 $get_prtext5 ="";
 
@@ -89,60 +89,11 @@ if ($total_hit_count === null) {
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
 
-              switch ($i){
-                case 1:
-                  $get_name1 =$restArray->{"name"};
-                  $get_url1 =$restArray->{"url"};
-                  $get_pr1 =$restArray->{"pr"}->{"pr_short"};
-                  if(empty($get_pr1)){
-                    $get_pr1 ="PRテキストはありません。";
-                  }
-                  $get_prtext1　= mb_strimwidth($get_pr1, 0, 50, "...");
-                  continue 2;
-                case 2:
-                  $get_name2 =$restArray->{"name"};
-                  $get_url2 =$restArray->{"url"};
-                  $get_pr2 =$restArray->{"pr"}->{"pr_short"};
-                  if(empty($get_pr2)){
-                    $get_pr2 ="PRテキストはありません。";
-                  }
-                  $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
-                  continue 2;
-                case 3:
-                  $get_name3 =$restArray->{"name"};
-                  $get_url3 =$restArray->{"url"};
-                  $get_pr3 =$restArray->{"pr"}->{"pr_short"};
-                  if(empty($get_pr3)){
-                    $get_pr3 ="PRテキストはありません。";
-                  }
-                  $get_prtext3　= mb_strimwidth($get_pr3, 0, 50, "...");
-                  continue 2;
-                case 4:
-                  $get_name4 =$restArray->{"name"};
-                  $get_url4 =$restArray->{"url"};
-                  $get_pr4 =$restArray->{"pr"}->{"pr_short"};
-                  if(empty($get_pr4)){
-                    $get_pr4 ="PRテキストはありません。";
-                  }
-                  $get_prtext4　= mb_strimwidth($get_pr4, 0, 50, "...");
-                  continue 2;
-                case 5:
-                  $get_name5 =$restArray->{"name"};
-                  $get_url5 =$restArray->{"url"};
-                  $get_pr5 =$restArray->{"pr"}->{"pr_short"};
-                  if(empty($get_pr5)){
-                    $get_pr5 ="PRテキストはありません。";
-                  }
-                  $get_prtext5　= mb_strimwidth($get_pr5, 0, 50, "...");
-                  continue 2;
-              }
-
-              $i++;
           }
      
           }
     }
-}
+};
    // $response_format_text .="Powered by ぐるなび";
 
 
