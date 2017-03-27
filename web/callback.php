@@ -93,7 +93,7 @@ if ($total_hit_count === null) {
               $get_url2 =$restArray->{"url"};
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
               //if(empty(trim($get_pr2))){
-                $get_pr2 ="PRテキストはありません。";
+              $get_pr2 ="PRテキストはありません。";
               //}
               $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
 
