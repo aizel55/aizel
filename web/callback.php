@@ -122,7 +122,7 @@ $response_format_text = [
     "columns" => [
         [
           "title" => $get_name1,
-          "text" => "PR:".$get_prtext1,
+          "text" => "PR:".$get_pr1,
           "actions" => [
             [
                 "type" => "uri",
