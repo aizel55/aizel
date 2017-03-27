@@ -92,9 +92,9 @@ if ($total_hit_count === null) {
               $get_name2 =$restArray->{"name"};
               $get_url2 =$restArray->{"url"};
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
-              if(empty(trim($get_pr2))){
+//              if(empty(trim($get_pr2))){
                 $get_pr2 ="PRテキストはありません。";
-              }
+//              }
 //              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...");
               $get_prtext2　= "test";
 
@@ -129,7 +129,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name2,
-          "text" => "PR:".$get_prtext2,
+          "text" => "PR:".$get_pr2,
           "actions" => [
             [
                 "type" => "uri",
