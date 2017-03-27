@@ -95,8 +95,8 @@ if ($total_hit_count === null) {
 
               //switch文だとLineにレスが返らないのでif文で対応
 
-              if ($i===5){
-                  $get_pr5 = "5を通りました";
+              if ($i===1){
+                  $get_pr1 = "1を通りました";
               }
 
 //              if(empty(trim($get_pr2))){
@@ -123,7 +123,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          "title" => $get_name1,
+          "title" => $get_name1.$i,
           "text" => "PR:".$get_pr1,
           "actions" => [
             [
