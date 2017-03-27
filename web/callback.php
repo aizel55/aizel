@@ -94,21 +94,6 @@ if ($total_hit_count === null) {
               $get_pr2 =$restArray->{"pr"}->{"pr_long"};
 
               //switch文だとLineにレスが返らないのでif文で対応
-              if ($i===1){
-                  $get_pr1 = "1を通りました";
-              }
-
-              if ($i===2){
-                  $get_pr2 = "2を通りました";
-              }
-
-              if ($i===3){
-                  $get_pr3 = "3を通りました";
-              }
-
-              if ($i===4){
-                  $get_pr4 = "4を通りました";
-              }
 
               if ($i===5){
                   $get_pr5 = "5を通りました";
