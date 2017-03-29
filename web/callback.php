@@ -103,7 +103,7 @@ if ($total_hit_count === null) {
 //                $get_pr2 ="PRテキストはありません。";
 //              }
 //              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
-              $i++;
+//              $i++;
           }
      
           }
@@ -123,7 +123,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          "title" => $get_name1.$i,
+          "title" => $get_name1,
           "text" => "PR:".$get_pr1,
           "actions" => [
             [
