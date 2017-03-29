@@ -95,9 +95,9 @@ if ($total_hit_count === null) {
 
               //switch文だとLineにレスが返らないのでif文で対応
 
-              if ($i===1){
+//              if ($i===1){
                   $get_pr1 = "1を通りました";
-              }
+//              }
 
 //              if(empty(trim($get_pr2))){
 //                $get_pr2 ="PRテキストはありません。";
