@@ -88,6 +88,7 @@ if ($total_hit_count === null) {
                 if($i===1){
                   $get_name1 =$restArray->{"name"};
                   $get_url1 =$restArray->{"url"};
+                }
 
                 if($i===2){
                   $get_name2 =$restArray->{"name"};
