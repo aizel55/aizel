@@ -91,7 +91,7 @@ if ($total_hit_count === null) {
 
               $get_name2 =$restArray->{"name"};
               $get_url2 =$restArray->{"url"};
-              $get_pr2 =$restArray->{"pr"}->{"pr_long"};
+              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
 
               //switch文だとLineにレスが返らないのでif文で対応
 
@@ -100,7 +100,7 @@ if ($total_hit_count === null) {
 //              }
 
 //              if(empty(trim($get_pr2))){
-                $get_pr2 ="PRテキストはありません。";
+//                $get_pr2 ="PRテキストはありません。";
 //              }
 //              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
 //              $i++;
