@@ -50,30 +50,20 @@ $i = 1;
 
 //イケてないけど、$response_format_textにループで配列データ格納しようとしても
 //失敗してしまうのでベタうちにする。
-$get_name1 ="a";
+$get_name1 ="該当なし";
 $get_url1 ="http://www.yahoo.co.jp/";
-$get_pr1 ="";
-$get_prtext1 ="";
 
-$get_name2 ="b";
+$get_name2 ="該当なし";
 $get_url2 ="http://www.yahoo.co.jp/";
-$get_pr2 ="";
-$get_prtext2 ="";
 
-$get_name3 ="c";
+$get_name3 ="該当なし";
 $get_url3 ="http://www.yahoo.co.jp/";
-$get_pr3 ="";
-$get_prtext3 ="";
 
-$get_name4 ="d";
+$get_name4 ="該当なし";
 $get_url4 ="http://www.yahoo.co.jp/";
-$get_pr4 ="";
-$get_prtext4 ="";
 
-$get_name5 ="e";
+$get_name5 ="該当なし";
 $get_url5 ="http://www.yahoo.co.jp/";
-$get_pr5 ="";
-$get_prtext5 ="";
 
 
 //結果をパース
@@ -89,22 +79,35 @@ if ($total_hit_count === null) {
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
 
-              $get_name2 =$restArray->{"name"};
-              $get_url2 =$restArray->{"url"};
+//              $get_name2 =$restArray->{"name"};
+//              $get_url2 =$restArray->{"url"};
 //              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
 
               //switch文だとLineにレスが返らないのでif文で対応
 
-              switch ($i){
-                case 4:
+                if($i===1){
+                  $get_name1 =$restArray->{"name"};
+                  $get_url1 =$restArray->{"url"};
+
+                if($i===2){
+                  $get_name2 =$restArray->{"name"};
+                  $get_url2 =$restArray->{"url"};
+                }
+
+                if($i===3){
+                  $get_name3 =$restArray->{"name"};
+                  $get_url3 =$restArray->{"url"};
+                }
+
+                if($i===4){
                   $get_name4 =$restArray->{"name"};
                   $get_url4 =$restArray->{"url"};
-                  continue 2;
-              };
+                }
 
-              if ($i===3){
-                  $get_pr3 = "3を通りました";
-              }
+                if($i===5){
+                  $get_name5 =$restArray->{"name"};
+                  $get_url5 =$restArray->{"url"};
+                }
 
 //              if(empty(trim($get_pr2))){
 //                $get_pr2 ="PRテキストはありません。";
