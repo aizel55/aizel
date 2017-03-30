@@ -78,8 +78,8 @@ if ($total_hit_count === null) {
           foreach((array)$val as $restArray){
 
                 //if(checkString($restArray->{'access'}->{'line'}))｛
-//                  $result = $restArray->{'pr'}->{'pr_short'};
-//                　$get_pr2 = json_encode($result);
+              $str = $restArray->{'pr'}->{'pr_short'};
+            　$get_pr2 = mb_convert_encoding($str, "UTF-8", "Unicode");
                 //}
 
               //switch文だとLineにレスが返らないのでif文で対応
