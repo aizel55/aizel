@@ -91,19 +91,19 @@ if ($total_hit_count === null) {
 
               $get_name2 =$restArray->{"name"};
               $get_url2 =$restArray->{"url"};
-              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
+//              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
 
               //switch文だとLineにレスが返らないのでif文で対応
 
-//              if ($i===1){
-//                  $get_pr1 = "1を通りました";
-//              }
+              if ($i===3){
+                  $get_pr3 = "3を通りました";
+              }
 
 //              if(empty(trim($get_pr2))){
 //                $get_pr2 ="PRテキストはありません。";
 //              }
 //              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
-//              $i++;
+              $i++;
           }
      
           }
