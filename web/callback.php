@@ -95,6 +95,13 @@ if ($total_hit_count === null) {
 
               //switch文だとLineにレスが返らないのでif文で対応
 
+              switch ($i){
+                case 4:
+                  $get_name4 =$restArray->{"name"};
+                  $get_url4 =$restArray->{"url"};
+                  continue 2;
+              };
+
               if ($i===3){
                   $get_pr3 = "3を通りました";
               }
