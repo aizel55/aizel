@@ -79,6 +79,9 @@ if ($total_hit_count === null) {
               $result .= $restArray->{'name'}."\n";
               $result .= $restArray->{'url'}."\n";
 
+if(checkString($restArray->{'pr'}->{'pr_short'}))｛
+  $result .= (string)$restArray->{'pr'}->{'pr_short'};
+｝
 //              $get_name2 =$restArray->{"name"};
 //              $get_url2 =$restArray->{"url"};
 //              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
@@ -210,3 +213,14 @@ $ch = curl_init("https://api.line.me/v2/bot/message/reply");
     $result = curl_exec($ch);
     curl_close($ch);
 
+//文字列であるかをチェック
+function checkString($input)
+{
+ 
+    if(isset($input) && is_string($input)) {
+        return true;
+    }else{
+        return false;
+    }
+ 
+}
