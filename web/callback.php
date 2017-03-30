@@ -76,15 +76,10 @@ if ($total_hit_count === null) {
     foreach((array)$obj as $key => $val){
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
-              $result .= $restArray->{'name'}."\n";
-              $result .= $restArray->{'url'}."\n";
 
 //if(checkString($restArray->{'pr'}->{'pr_short'}))｛
 //  $result .= (string)$restArray->{'pr'}->{'pr_short'};
-//｝
-//              $get_name2 =$restArray->{"name"};
-//              $get_url2 =$restArray->{"url"};
-//              $get_pr2 =$restArray->{"pr"}->{"pr_short"};
+//}
 
               //switch文だとLineにレスが返らないのでif文で対応
 
@@ -113,10 +108,6 @@ if ($total_hit_count === null) {
                   $get_url5 =$restArray->{"url"};
                 }
 
-//              if(empty(trim($get_pr2))){
-//                $get_pr2 ="PRテキストはありません。";
-//              }
-//              $get_prtext2　= mb_strimwidth($get_pr2, 0, 50, "...",'utf-8');
               $i++;
           }
      
