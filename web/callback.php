@@ -77,9 +77,9 @@ if ($total_hit_count === null) {
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
 
-//if(checkString($restArray->{'pr'}->{'pr_short'}))｛
-//  $result .= (string)$restArray->{'pr'}->{'pr_short'};
-//}
+                if(checkString($restArray->{'pr'}->{'pr_short'}))｛
+                //  $result .= (string)$restArray->{'pr'}->{'pr_short'};
+                }
 
               //switch文だとLineにレスが返らないのでif文で対応
 
@@ -120,7 +120,7 @@ if ($total_hit_count === null) {
 //返信データ作成
 //	"type" => "text",
 //	"text" => $result
-//          $work_message = $restArray->{'name'};
+
 $response_format_text = [
   "type" => "template",
   "altText" => "候補をご案内しています。",
