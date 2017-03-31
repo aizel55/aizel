@@ -4,19 +4,22 @@ $gnaviaccesskey = getenv('gnavi_access_key');
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
 //ユーザーからのメッセージ取得
-$json_string = file_get_contents('php://input');
-$jsonObj = json_decode($json_string);
+//$json_string = file_get_contents('php://input');
+//$jsonObj = json_decode($json_string);
 
-$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
+//$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 //メッセージ取得
-$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
+//$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
-$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+//$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 //緯度取得
-$latitude = $jsonObj->{"events"}[0]->{"message"}->{"latitude"};
+//$latitude = $jsonObj->{"events"}[0]->{"message"}->{"latitude"};
 //経度取得
-$longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
+//$longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
+
+$latitude ="35.670083";
+$longitude ="139.763267";
 
 echo "test";
 
@@ -80,7 +83,6 @@ if ($total_hit_count === null) {
 
                 //if(checkString($restArray->{'access'}->{'line'}))｛
               $str = $restArray->{'pr'}->{'pr_short'};
-            　$get_pr2 = mb_convert_encoding($str, "UTF-8", "Unicode");
                 //}
 
               //switch文だとLineにレスが返らないのでif文で対応
