@@ -21,7 +21,8 @@ $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 $latitude ="35.670083";
 $longitude ="139.763267";
 
-echo "test";
+echo "test"."\n";
+echo "test4"."\n";
 
 //エンドポイントのURIとフォーマットパラメータを変数に入れる
 $uri   = "http://api.gnavi.co.jp/RestSearchAPI/20150630/";
@@ -38,8 +39,6 @@ $hit_per_page = "5";
 
 //緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
 $range = 2;
-
-echo $range;
 
 //URL組み立て
 $url  = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", $uri, "?format=", $format, "&keyid=", $acckey, "&latitude=", $latitude,"&longitude=",$longitude,"&category_s=",$category_s,"&range=",$range,"&hit_per_page=",$hit_per_page);
