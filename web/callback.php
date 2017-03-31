@@ -39,6 +39,8 @@ $hit_per_page = "5";
 //緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
 $range = 2;
 
+echo $range;
+
 //URL組み立て
 $url  = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", $uri, "?format=", $format, "&keyid=", $acckey, "&latitude=", $latitude,"&longitude=",$longitude,"&category_s=",$category_s,"&range=",$range,"&hit_per_page=",$hit_per_page);
 //API実行
@@ -84,7 +86,6 @@ if ($total_hit_count === null) {
                 //if(checkString($restArray->{'access'}->{'line'}))｛
               $str = $restArray->{'pr'}->{'pr_short'};
                 //}
-echo $str;
 
               //switch文だとLineにレスが返らないのでif文で対応
 
