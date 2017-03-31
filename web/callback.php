@@ -18,6 +18,7 @@ $latitude = $jsonObj->{"events"}[0]->{"message"}->{"latitude"};
 //経度取得
 $longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
 
+echo "test";
 
 //エンドポイントのURIとフォーマットパラメータを変数に入れる
 $uri   = "http://api.gnavi.co.jp/RestSearchAPI/20150630/";
