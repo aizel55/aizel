@@ -4,24 +4,24 @@ $gnaviaccesskey = getenv('gnavi_access_key');
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
 //ユーザーからのメッセージ取得
-//$json_string = file_get_contents('php://input');
-//$jsonObj = json_decode($json_string);
+$json_string = file_get_contents('php://input');
+$jsonObj = json_decode($json_string);
 
-//$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
+$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 //メッセージ取得
-//$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
+$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
-//$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 //緯度取得
-//$latitude = $jsonObj->{"events"}[0]->{"message"}->{"latitude"};
+$latitude = $jsonObj->{"events"}[0]->{"message"}->{"latitude"};
 //経度取得
-//$longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
+$longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
 
-$latitude =35.691421;
-$longitude =139.692595;
-
-echo "test<br>";
+//debug用
+//$latitude =35.691421;
+//$longitude =139.692595;
+//echo "test<br>";
 
 //エンドポイントのURIとフォーマットパラメータを変数に入れる
 $uri   = "http://api.gnavi.co.jp/RestSearchAPI/20150630/";
