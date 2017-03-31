@@ -89,7 +89,7 @@ if ($total_hit_count === null) {
               $station .= $restArray->{"access"}->{"exit"};
               $station .= $restArray->{"access"}->{"walk"} . "分";
               print_r($station);
-              $address .= $restArray->{"adress"};
+              $address .= $restArray->{"address"};
               print_r($address);
 
               //switch文だとLineにレスが返らないのでif文で対応
