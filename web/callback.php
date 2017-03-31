@@ -18,8 +18,8 @@ $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 //経度取得
 //$longitude = $jsonObj->{"events"}[0]->{"message"}->{"longitude"};
 
-$latitude =35.670083;
-$longitude =139.763267;
+$latitude =35.691421;
+$longitude =139.692595;
 
 echo "test<br>";
 
