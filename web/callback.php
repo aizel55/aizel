@@ -81,9 +81,10 @@ if ($total_hit_count === null) {
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
 
-                //if(checkString($restArray->{'access'}->{'line'}))｛
-              $str = $restArray->{'pr'}->{'pr_short'};
-                //}
+              //if(checkString($restArray->{'access'}->{'line'}))｛
+              //$str = $restArray->{'pr'}->{'pr_short'};
+              //}
+              print_r($restArray);
 
               //switch文だとLineにレスが返らないのでif文で対応
 
@@ -119,8 +120,6 @@ if ($total_hit_count === null) {
     }
 }
    // $response_format_text .="Powered by ぐるなび";
-
-print_r($restArray);
 
 //返信データ作成
 //	"type" => "text",
