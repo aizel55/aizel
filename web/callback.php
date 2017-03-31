@@ -137,7 +137,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_syouyu.png",
+          //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_syouyu.png",
           "title" => $get_name1,
           "text" => "住所:".$get_address1. "(" .$api_comment . ")",
           "actions" => [
@@ -149,7 +149,7 @@ $response_format_text = [
           ]
         ],
         [
-          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_shio.png",
+          //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_shio.png",
           "title" => $get_name2,
           "text" => "住所:".$get_address2. "(" .$api_comment . ")",
           "actions" => [
@@ -161,7 +161,7 @@ $response_format_text = [
           ]
         ],
         [
-          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_miso.png",
+         // "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_miso.png",
           "title" => $get_name3,
           "text" => "住所:".$get_address3. "(" .$api_comment . ")",
           "actions" => [
@@ -173,7 +173,7 @@ $response_format_text = [
           ]
         ],
         [
-          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_tonkotsu.png",
+          //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_tonkotsu.png",
           "title" => $get_name4,
           "text" => "住所:".$get_address4. "(" .$api_comment . ")",
           "actions" => [
@@ -185,7 +185,7 @@ $response_format_text = [
           ]
         ],
         [
-          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/food_tsukemen.png",
+          //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/food_tsukemen.png",
           "title" => $get_name5,
           "text" => "住所:".$get_address5. "(" .$api_comment . ")",
           "actions" => [
