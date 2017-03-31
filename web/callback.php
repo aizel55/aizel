@@ -135,7 +135,7 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
-          //"thumbnailImageUrl" => "https://github.com/aizel55/aizel/blob/master/web/food_tsukemen.png",
+          "thumbnailImageUrl" => "https://raw.githubusercontent.com/wiki/aizel55/aizel/images/ramen_syouyu.png",
           "title" => $get_name1,
           "text" => "住所:".$get_address1,//."(".$api_comment.")",
           "actions" => [
