@@ -80,14 +80,11 @@ if ($total_hit_count === null) {
     foreach((array)$obj as $key => $val){
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
-
-              $station ="";
-              $station .= $restArray->{"access"}->{"station"};
-              $station .= $restArray->{"access"}->{"exit"};
-              $station .= $restArray->{"access"}->{"walk"} . "分";
-              print_r($station);
-              
-              print_r($address);
+              //最寄駅入れようかと思ったけど、任意位置で計測するから駅近とは限らないことに気づいた
+              //$station ="";
+              //$station .= $restArray->{"access"}->{"station"};
+              //$station .= $restArray->{"access"}->{"exit"};
+              //$station .= $restArray->{"access"}->{"walk"} . "分";
 
               //switch文だとLineにレスが返らないのでif文で対応
 
