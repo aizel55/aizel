@@ -84,7 +84,7 @@ if ($total_hit_count === null) {
               //if(checkString($restArray->{'access'}->{'line'}))｛
               //$str = $restArray->{'pr'}->{'pr_short'};
               //}
-              print_r($restArray);
+              print_r($restArray->{"name"});
 
               //switch文だとLineにレスが返らないのでif文で対応
 
