@@ -87,7 +87,6 @@ if ($total_hit_count === null) {
               //$station .= $restArray->{"access"}->{"walk"} . "分";
 
               //switch文だとLineにレスが返らないのでif文で対応
-
                 if($i===1){
                   $get_name1 = $restArray->{"name"};
                   $get_url1 = $restArray->{"url"};
@@ -139,7 +138,7 @@ $response_format_text = [
         [
           //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_syouyu.png",
           "title" => $get_name1,
-          "text" => "住所:".$get_address1. "(" .$api_comment . ")",
+          "text" => "住所:".$get_address1,//. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -151,7 +150,7 @@ $response_format_text = [
         [
           //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_shio.png",
           "title" => $get_name2,
-          "text" => "住所:".$get_address2. "(" .$api_comment . ")",
+          "text" => "住所:".$get_address2,//. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -163,7 +162,7 @@ $response_format_text = [
         [
          // "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_miso.png",
           "title" => $get_name3,
-          "text" => "住所:".$get_address3. "(" .$api_comment . ")",
+          "text" => "住所:".$get_address3,//. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -175,7 +174,7 @@ $response_format_text = [
         [
           //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_tonkotsu.png",
           "title" => $get_name4,
-          "text" => "住所:".$get_address4. "(" .$api_comment . ")",
+          "text" => "住所:".$get_address4,//. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -187,7 +186,7 @@ $response_format_text = [
         [
           //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/food_tsukemen.png",
           "title" => $get_name5,
-          "text" => "住所:".$get_address5. "(" .$api_comment . ")",
+          "text" => "住所:".$get_address5,//. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -215,6 +214,6 @@ $ch = curl_init("https://api.line.me/v2/bot/message/reply");
       'Content-Type: application/json; charser=UTF-8',
       'Authorization: Bearer ' . $accessToken
     ));
-    $result = curl_exec($ch);
-    curl_close($ch);
+  $result = curl_exec($ch);
+  curl_close($ch);
 
