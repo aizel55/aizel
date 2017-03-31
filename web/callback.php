@@ -21,8 +21,8 @@ $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 $latitude ="35.670083";
 $longitude ="139.763267";
 
-echo "test"."\n";
-echo "test4"."\n";
+echo "test\n\n";
+echo "test4\n";
 
 //エンドポイントのURIとフォーマットパラメータを変数に入れる
 $uri   = "http://api.gnavi.co.jp/RestSearchAPI/20150630/";
