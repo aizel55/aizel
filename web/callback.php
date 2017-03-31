@@ -85,11 +85,12 @@ if ($total_hit_count === null) {
               //$str = $restArray->{'pr'}->{'pr_short'};
               //}
               $station ="";
-              $station .= $restArray->{"access"}->{"line"};
               $station .= $restArray->{"access"}->{"station"};
               $station .= $restArray->{"access"}->{"exit"};
               $station .= $restArray->{"access"}->{"walk"} . "分";
               print_r($station);
+              $address .= $restArray->{"adress"};
+              print_r($address);
 
               //switch文だとLineにレスが返らないのでif文で対応
 
