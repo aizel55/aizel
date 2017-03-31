@@ -81,42 +81,44 @@ if ($total_hit_count === null) {
       if(strcmp($key, "rest") == 0){
           foreach((array)$val as $restArray){
 
-              //if(checkString($restArray->{'access'}->{'line'}))｛
-              //$str = $restArray->{'pr'}->{'pr_short'};
-              //}
               $station ="";
               $station .= $restArray->{"access"}->{"station"};
               $station .= $restArray->{"access"}->{"exit"};
               $station .= $restArray->{"access"}->{"walk"} . "分";
               print_r($station);
-              $address .= $restArray->{"address"};
+              
               print_r($address);
 
               //switch文だとLineにレスが返らないのでif文で対応
 
                 if($i===1){
-                  $get_name1 =$restArray->{"name"};
-                  $get_url1 =$restArray->{"url"};
+                  $get_name1 = $restArray->{"name"};
+                  $get_url1 = $restArray->{"url"};
+                  $address1 = $restArray->{"address"};
                 }
 
                 if($i===2){
                   $get_name2 =$restArray->{"name"};
                   $get_url2 =$restArray->{"url"};
+                  $address2 = $restArray->{"address"};
                 }
 
                 if($i===3){
                   $get_name3 =$restArray->{"name"};
                   $get_url3 =$restArray->{"url"};
+                  $address3 = $restArray->{"address"};
                 }
 
                 if($i===4){
                   $get_name4 =$restArray->{"name"};
                   $get_url4 =$restArray->{"url"};
+                  $address4 = $restArray->{"address"};
                 }
 
                 if($i===5){
                   $get_name5 =$restArray->{"name"};
                   $get_url5 =$restArray->{"url"};
+                  $address5 = $restArray->{"address"};
                 }
 
               $i++;
@@ -139,7 +141,7 @@ $response_format_text = [
     "columns" => [
         [
           "title" => $get_name1,
-          "text" => "PR:".$get_pr1.$api_comment,
+          "text" => "住所:".$get_adress1.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -150,7 +152,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name2,
-          "text" => "PR:".$get_pr2.$api_comment,
+          "text" => "住所:".$get_adress2.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -161,7 +163,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name3,
-          "text" => "PR:".$get_pr3."/n" . $api_comment,
+          "text" => "住所:".$get_adress3 ."/n" . $api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -172,7 +174,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name4,
-          "text" => "PR:".$get_pr4. "/n" . $api_comment,
+          "text" => "住所:".$get_adress4. "/n" . $api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -183,7 +185,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name5,
-          "text" => "PR:".$get_pr5.$api_comment,
+          "text" => "住所:".$get_adress5.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
