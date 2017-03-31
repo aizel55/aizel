@@ -125,7 +125,7 @@ if ($total_hit_count === null) {
           }
     }
 }
-   // $response_format_text .="Powered by ぐるなび";
+$api_comment ="Powered by ぐるなび";
 
 //返信データ作成
 //	"type" => "text",
@@ -139,7 +139,7 @@ $response_format_text = [
     "columns" => [
         [
           "title" => $get_name1,
-          "text" => "PR:".$get_pr1,
+          "text" => "PR:".$get_pr1.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -150,7 +150,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name2,
-          "text" => "PR:".$get_pr2,
+          "text" => "PR:".$get_pr2.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -161,7 +161,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name3,
-          "text" => "PR:".$get_pr3,
+          "text" => "PR:".$get_pr3."/n" . $api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -172,7 +172,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name4,
-          "text" => "PR:".$get_pr4,
+          "text" => "PR:".$get_pr4. "/n" . $api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -183,7 +183,7 @@ $response_format_text = [
         ],
         [
           "title" => $get_name5,
-          "text" => "PR:".$get_pr5,
+          "text" => "PR:".$get_pr5.$api_comment,
           "actions" => [
             [
                 "type" => "uri",
@@ -214,14 +214,3 @@ $ch = curl_init("https://api.line.me/v2/bot/message/reply");
     $result = curl_exec($ch);
     curl_close($ch);
 
-//文字列であるかをチェック
-function checkString($input)
-{
- 
-    if(isset($input) && is_string($input)) {
-        return true;
-    }else{
-        return false;
-    }
- 
-};
