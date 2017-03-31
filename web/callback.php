@@ -91,31 +91,31 @@ if ($total_hit_count === null) {
                 if($i===1){
                   $get_name1 = $restArray->{"name"};
                   $get_url1 = $restArray->{"url"};
-                  $address1 = $restArray->{"address"};
+                  $get_address1 = $restArray->{"address"};
                 }
 
                 if($i===2){
                   $get_name2 =$restArray->{"name"};
                   $get_url2 =$restArray->{"url"};
-                  $address2 = $restArray->{"address"};
+                  $get_address2 = $restArray->{"address"};
                 }
 
                 if($i===3){
                   $get_name3 =$restArray->{"name"};
                   $get_url3 =$restArray->{"url"};
-                  $address3 = $restArray->{"address"};
+                  $get_address3 = $restArray->{"address"};
                 }
 
                 if($i===4){
                   $get_name4 =$restArray->{"name"};
                   $get_url4 =$restArray->{"url"};
-                  $address4 = $restArray->{"address"};
+                  $get_address4 = $restArray->{"address"};
                 }
 
                 if($i===5){
                   $get_name5 =$restArray->{"name"};
                   $get_url5 =$restArray->{"url"};
-                  $address5 = $restArray->{"address"};
+                  $get_address5 = $restArray->{"address"};
                 }
 
               $i++;
@@ -137,8 +137,9 @@ $response_format_text = [
     "type" => "carousel",
     "columns" => [
         [
+          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_syouyu.png",
           "title" => $get_name1,
-          "text" => "住所:".$get_adress1.$api_comment,
+          "text" => "住所:".$get_address1. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -148,8 +149,9 @@ $response_format_text = [
           ]
         ],
         [
+          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_shio.png",
           "title" => $get_name2,
-          "text" => "住所:".$get_adress2.$api_comment,
+          "text" => "住所:".$get_address2. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -159,8 +161,9 @@ $response_format_text = [
           ]
         ],
         [
+          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_miso.png",
           "title" => $get_name3,
-          "text" => "住所:".$get_adress3 ."/n" . $api_comment,
+          "text" => "住所:".$get_address3. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -170,8 +173,9 @@ $response_format_text = [
           ]
         ],
         [
+          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ramen_tonkotsu.png",
           "title" => $get_name4,
-          "text" => "住所:".$get_adress4. "/n" . $api_comment,
+          "text" => "住所:".$get_address4. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
@@ -181,8 +185,9 @@ $response_format_text = [
           ]
         ],
         [
+          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/food_tsukemen.png",
           "title" => $get_name5,
-          "text" => "住所:".$get_adress5.$api_comment,
+          "text" => "住所:".$get_address5. "(" .$api_comment . ")",
           "actions" => [
             [
                 "type" => "uri",
