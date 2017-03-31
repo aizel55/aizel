@@ -120,7 +120,7 @@ if ($total_hit_count === null) {
 }
    // $response_format_text .="Powered by ぐるなび";
 
-echo $get_url2;
+echo $str;
 
 //返信データ作成
 //	"type" => "text",
