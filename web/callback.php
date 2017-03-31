@@ -22,7 +22,6 @@ $latitude ="35.670083";
 $longitude ="139.763267";
 
 echo "test<br>";
-echo "test1";
 
 //エンドポイントのURIとフォーマットパラメータを変数に入れる
 $uri   = "http://api.gnavi.co.jp/RestSearchAPI/20150630/";
@@ -121,6 +120,7 @@ if ($total_hit_count === null) {
 }
    // $response_format_text .="Powered by ぐるなび";
 
+echo $str;
 
 //返信データ作成
 //	"type" => "text",
