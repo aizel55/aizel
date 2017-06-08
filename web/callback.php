@@ -1,5 +1,4 @@
 <?php
-
 function get($url, array $params = [], array $headers = [])
 {
     $ch = curl_init();
@@ -36,7 +35,7 @@ function post($url, array $params = [], array $headers = [])
 
 // アクセスキー
 $accessKeys = [
-    'GNAVI' => getenv('GNAVI_ACCESS_KEY'),
+    'GNAVI' => getenv('gnavi_access_key'),
     'LINE' => getenv('LINE_CHANNEL_ACCESS_TOKEN'),
 ];
 
