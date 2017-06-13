@@ -6,7 +6,7 @@ function get($url, array $params = [], array $headers = [])
         CURLOPT_URL => $url . '?' . http_build_query($params, '', '&'), 
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FAILONERROR => true,
-        CURLOPT_HTTPHEADER => $headers
+        CURLOPT_HTTPHEADER => $headers,
     ]);
     $response = curl_exec($ch);
     if ($response === false) {
@@ -24,7 +24,7 @@ function post($url, array $params = [], array $headers = [])
         CURLOPT_FAILONERROR => true,
         CURLOPT_POST => true,
         CURLOPT_POSTFIELDS => http_build_query($params, '', '&'),
-        CURLOPT_HTTPHEADER => $headers
+        CURLOPT_HTTPHEADER => $headers,
     ]);
     $response = curl_exec($ch);
     if ($response === false) {
@@ -36,7 +36,7 @@ function post($url, array $params = [], array $headers = [])
 // アクセスキー
 $accessKeys = [
     'GNAVI' => getenv('gnavi_access_key'),
-    'LINE' => getenv('LINE_CHANNEL_ACCESS_TOKEN')
+    'LINE' => getenv('LINE_CHANNEL_ACCESS_TOKEN'),
 ];
 
 // ユーザーからのメッセージ取得
@@ -50,7 +50,7 @@ $response = get('http://api.gnavi.co.jp/RestSearchAPI/20150630', [
     'longitude' => $request->events[0]->message->longitude,
     'category_s' => 'RSFST08008', // 業態がラーメン屋さんを意味するぐるなびのコード(大業態マスタ取得APIをコールして調査)
     'range' => 2, // 緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
-    'hit_per_page' => 5
+    'hit_per_page' => 5,
 ]);
 
 // LINEへのリクエスト実行
@@ -71,7 +71,7 @@ post('https://api.line.me/v2/bot/message/reply', [
                         'uri' => $rest->url,
                     ]
                 ];
-            }, $response->rest)
+            }, $response->rest),
         ]
     ],
 ], [
