@@ -50,7 +50,7 @@ $response = get('http://api.gnavi.co.jp/RestSearchAPI/20150630', [
     'longitude' => $request->events[0]->message->longitude,
     'category_s' => 'RSFST08008', // 業態がラーメン屋さんを意味するぐるなびのコード(大業態マスタ取得APIをコールして調査)
     'range' => 2, // 緯度経度は日本測地系で日比谷シャンテのもの。範囲はrange=2で500m以内を指定している。
-    'hit_per_page' => 5, 
+    'hit_per_page' => 5
 ]);
 
 // LINEへのリクエスト実行
