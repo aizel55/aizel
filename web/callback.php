@@ -64,7 +64,7 @@ post('https://api.line.me/v2/bot/message/reply', [
             'columns' => array_map(function ($rest) {
                 return [
                     'title' => $rest->name,
-                    'text' => "住所: $rest->address",
+                    'text' => "住所:". $rest->address,
                     'actions' => [
                         'type' => 'uri',
                         'label' => 'URL',
