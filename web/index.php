@@ -6,6 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  LINE BOT対応(動作テスト)
+  LINE BOT対応
 </body>
 </html>
