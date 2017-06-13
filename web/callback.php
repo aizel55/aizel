@@ -76,5 +76,5 @@ post('https://api.line.me/v2/bot/message/reply', [
     ],
 ], [
     'Content-Type: application/json; charser=UTF-8',
-    "Authorization: Bearer " .$accessKeys[LINE]
+    "Authorization: Bearer " . $accessKeys[LINE]
 ]);
